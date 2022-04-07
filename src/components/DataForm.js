@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import { nanoid } from 'nanoid';
 
-function DataForm({ onSubmit, editNote }) {
+function DataForm({ onSubmit }) {
     const [date, setDate] = useState('');
     const [distance, setdistance] = useState('');
 
