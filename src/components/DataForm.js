@@ -30,30 +30,30 @@ function DataForm({ onSubmit }) {
 
   return (
     <Form onSubmit={onSubmitHandler} className="form">
-                <FormGroup className="formGroup">
-                    <Label htmlFor="date">Дата(ДД.ММ.ГГГГ)</Label>
-                    <Input 
-                        type="text" 
-                        id="date" 
-                        name="date" 
-                        value={date}
-                        onChange={onChangeDataHandler} 
-                        placeholder="Введите дату"
-                    />
-                </FormGroup>
-                <FormGroup className="formGroup">
-                    <Label htmlFor="distance">Пройдено км</Label>
-                    <Input 
-                        type="text" 
-                        id="distance" 
-                        name="distance"
-                        value={distance} 
-                        onChange={onChangeDistanceHandler} 
-                        placeholder="Введите расстояние"
-                    />
-                </FormGroup>
-                <Button color="primary" className="submit_btn">ОК</Button>
-            </Form>
+        <FormGroup className="formGroup">
+            <Label htmlFor="date">Дата(ДД.ММ.ГГГГ)</Label>
+            <Input 
+                type="text" 
+                id="date" 
+                name="date" 
+                value={date}
+                onChange={onChangeDataHandler} 
+                placeholder="Введите дату"
+            />
+            </FormGroup>
+            <FormGroup className="formGroup">
+                <Label htmlFor="distance">Пройдено км</Label>
+                <Input 
+                    type="text" 
+                    id="distance" 
+                    name="distance"
+                    value={distance} 
+                    onChange={onChangeDistanceHandler} 
+                    placeholder="Введите расстояние"
+                />
+            </FormGroup>
+            <Button color="primary" className="submit_btn">ОК</Button>
+    </Form>
   )
 }
 
