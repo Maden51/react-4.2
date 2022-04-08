@@ -6,9 +6,9 @@ import EditDataForm from './EditDataForm';
 function TrainingDays() {
     const [notes, setNotes] = useState([]);
     const [editNote, setEditNote] = useState({
-        date:'',
+        date: '',
         distance: '',
-        id:''
+        id: ''
     });
     const [editNoteId, setEditNoteId] = useState(null);
     
@@ -53,14 +53,18 @@ function TrainingDays() {
         setEditNote(newFormData);
     }
 
+
+    // Есть неисправленный баг, 
+    // при изменении на дату которую уже существует, 
+    // не объединяет объекты.
     const handleEditFormSubmit = (e) => {
         e.preventDefault();
+
         const editedData = {
             id: editNoteId,
             date: editNote.date,
             distance: parseFloat(editNote.distance)
         };
-
         const newData = [...notes];
         const index = notes.findIndex((note) => note.id === editNoteId);
         newData[index] = editedData;

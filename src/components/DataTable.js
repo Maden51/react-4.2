@@ -11,8 +11,8 @@ function DataTable({ notes, handleRemove, handleEdit }) {
 
   const arrNotes = notes.map((note) => note);
   const noteSortedByDate = arrNotes.sort((a, b) => {
-    const arr1 = a.date.split('.');
-    const arr2 = b.date.split('.');
+    const arr1 = a?.date.split('.');
+    const arr2 = b?.date.split('.');
     const d1 = new Date(arr1[2], arr1[1]-1, arr1[0]);
     const d2 = new Date(arr2[2], arr2[1]-1, arr2[0]);
     const r1 = d1.getTime();
